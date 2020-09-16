@@ -67,10 +67,60 @@ main {
     padding: 20px;
 }
 
+.form-divs {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.form-divs i {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    visibility: hidden;
+    font-size: 20px;
+
+
+}
+
+
+.form-divs.success i.fa-check-circle {
+    visibility: visible;
+    color: green;
+}
+
+.form-divs.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: rgb(212, 34, 34);
+}
+
+.form-divs.error small {
+    visibility: visible;
+    color: rgb(218, 31, 31);
+}
+
+
+
+
+.form-divs small {
+    position: absolute;
+    right: 10px;
+    visibility: hidden;
+}
+
+
+
 input {
     width: 90%;
-    border: 2px solid hsl(246, 25%, 77%) !important;
     border-radius: 5px;
+    margin-top: 5px;
+}
+
+.form-divs.success input {
+    border-color: rgb(85, 216, 85);
+}
+
+.form-divs.error input {
+    border-color: rgb(224, 49, 49);
 }
 
 input:focus {
@@ -79,8 +129,8 @@ input:focus {
 
 input::placeholder {
     font: inherit;
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 500;
     font-family: "Poppins", sans-serif;
 }
 
@@ -95,6 +145,7 @@ button {
     text-transform: uppercase;
     background-color: hsl(154, 59%, 51%);
     border: 2px solid hsl(154, 59%, 51%);
+    margin-top: 5px;
 }
 
 button:hover {
@@ -104,21 +155,6 @@ button:hover {
 
 button:visited {
     border: none;
-}
-
-.error-message {
-    color: red;
-    font-size: 11px;
-    text-align: right;
-    visibility: hidden;
-}
-
-.error-input {
-    border: 2px solid red !important;
-    background-image: url(./images/icon-error.svg) !important;
-    background-repeat: no-repeat !important;
-    background-position: right 15px top 5px !important;
-    background-size: auto !important;
 }
 
 .terms {
@@ -135,7 +171,7 @@ footer .attribution {
     font-size: 10px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 700px) {
     body {
         background-image: url(./images/bg-intro-desktop.png);
     }
@@ -152,7 +188,7 @@ footer .attribution {
         display: flex;
         flex-direction: column;
         margin-top: 250px;
-        width: 80%;
+        width: 90%;
 
 
     }
